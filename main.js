@@ -11,7 +11,6 @@ let timeAutoNext = 7000
 nextBtn.onclick = function(){
     showSlider('next')
 }
-
 prevBtn.onclick = function(){
     showSlider('prev')
 }
