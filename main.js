@@ -24,7 +24,7 @@ let runNextAuto = setTimeout(() => {
 
 function resetTimeAnimation() {
     runningTime.style.animation = 'none'
-    runningTime.offsetHeight /* trigger reflow */
+    runningTime.offsetHeight 
     runningTime.style.animation = null 
     runningTime.style.animation = 'runningTime 7s linear 1 forwards'
 }
