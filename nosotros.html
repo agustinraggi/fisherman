@@ -7,20 +7,14 @@
     <meta name="autor" content="Agustin Raggi">
     <title>FISHERMAN</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon"> 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="nosotros.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 </head>
 <body>
     <header class="taskBar">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <div class="logo">
-                    <a href="./index.html">
-                        <img src="./assets/logo2.png" width="120" height="50" alt="logo" />
-                    </a>
-                    </div>
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -29,6 +23,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./producto.html">PRODUCTOS</a>
                         </li>
+                        <div class="logoHeader">
+                            <a href="./index.html">
+                                <img class="logoHeader" src="./assets/logo2.png"  alt="logo" />
+                            </a>
+                        </div>
                         <li class="nav-item">
                             <a class="nav-link" href="./nosotros.html">NOSOTROS</a>
                         </li>
@@ -38,7 +37,50 @@
         </nav>
     </header>
     <main>
-
+        <section class="hero">
+            <div class="heroText">
+                <h2 class="heroTitle">Nuestro Proceso Artesanal</h2>
+                <h5>
+                    Nuestro gin no es solo una bebida, es una experiencia. <br>
+                    Comenzamos con la selección meticulosa 
+                    de enebro de la Patagonia, conocido por su aroma distintivo y su sabor robusto. <br>
+                    La región patagónica, con su clima fresco y aire puro, produce un enebro de calidad
+                    superior que es el corazón de nuestro gin.
+                </h5>
+            </div>
+            <figure class="heroFigure">
+                <img class="heroImg" src="assets/patanagonia.jpeg" alt="Patagonia" width="200px" height="220px" data-animation="up">
+            </figure>
+        </section>
+        <section class="hero hero--reverse">
+            <div class="heroText">
+                <h2 class="heroTitle">Hibiscus</h2>
+                <h5>
+                    Gin Fisherman "Hibiscus" es un gin cautivador <br/>
+                    que se destaca por su macerado en flores de Hibiscus.<br/>
+                    Este exótico ingrediente le otorga un color, un sabor y un <br/>
+                    aroma distintivo al resto. <br>
+                </h5>
+            </div>
+            <figure class="heroFigure">
+                <img class="heroImg" id="hibiscus" src="assets/botella 2.png" alt="Hibiscus" width="300px" height="220px" data-animation="show">
+            </figure>
+        </section>
+        <section class="hero">
+            <div class="heroText">
+                <h2 class="heroTitle">London Dry</h2>
+                <h5>
+                    Cada lote es destilado artesanalmente en alambiques de cobre, <br>
+                    un proceso que asegura que cada gota de gin Fisherman <br>
+                    capture la esencia de sus ingredientes naturales. <br>
+                    A nuestra base de enebro patagónico, añadimos semillas de coriandro, raíz de angélica, pimienta de Jamaica y un mix de cítricos <br>
+                    que crean un equilibrio perfecto de aromas y sabores.
+                </h5>
+            </div>
+            <figure class="heroFigure">
+                <img class="heroImg" src="assets/botella 1.png" alt="London Dry" width="300px" height="320px" data-animation="fade">
+            </figure>
+        </section>
     </main>
     <footer>
         <div class="wrapper">
@@ -51,6 +93,6 @@
         <p class="creator">© Created by Fisherman</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+    <script src="nosotros.js"></script>
 </body>
 </html>

@@ -9,6 +9,8 @@ html, body {
     width: 100%;
 }
 
+
+
 .logoHeader {
     display: flex;
     justify-content: center;
@@ -24,13 +26,28 @@ html, body {
     margin-right: 50px;
 }
 .nav-link {
-    color: rgb(151, 51, 56) !important;
+    color:white !important;
+
+}
+.nav-item {
+    margin: 0 90px;
 }
 
+nav {
+    background-color: rgb(151, 51, 56) !important;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#logoHeader1{
+    display: none;
+}
+#logoHeader2{
+    display: block;
+}
 .navbar-nav {
     display: flex;
     justify-content: center;
-
 }
 
 #bottle1, #bottle2 {
@@ -112,7 +129,7 @@ html, body {
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
-.content .des {
+.content {
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 18px;
@@ -227,16 +244,7 @@ footer {
     margin-top: 65px;
     margin-right: 10px;
 }
-/* medias */
 
-@media screen and (max-width: 640px) {
-    .wrapper {
-        width: 350px;
-    }
-    .wrapper ul li {
-        margin-top: 10px;
-    }
-}
 
 /* productos */
 .products {
@@ -269,3 +277,187 @@ footer {
     height: auto;
     display: block;
 }
+
+/* scroll */
+.hero {
+    height: 100vh;
+    min-height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero--reverse {
+    flex-direction: row-reverse;
+}
+
+.heroTitle {
+    font-size: 4rem;
+}
+
+.heroImg {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in 0.3s, transform 0.6s ease-in 0.3s;
+}
+
+[data-animation="fade"] {
+    transform: translateX(100%);
+}
+
+[data-animation="show"] {
+    transform: scale(0);
+}
+
+[data-animation="up"] {
+    transform: translateY(100%);
+}
+
+.unset {
+    opacity: 1;
+    transform: translateX(0), scale(1), translateY(0);
+}
+
+
+
+/* medias */
+
+@media (max-width: 991px) {
+    #logoHeader1 {
+        display: block !important;
+    }
+
+    #logoHeader2 {
+        display: none;
+    }
+    .content .title {
+        font-size: 50px;
+    }
+    .name {
+        font-size: 30px !important;
+    }
+    .carousel .list .item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        padding-left: 50px;
+    }
+    
+    .carousel .list .item #bottle1,
+    .carousel .list .item #bottle2 {
+        margin-left: 20px;
+        background-size: contain;
+        background-position: center center;
+        height: 50vh;
+    }
+    
+    .content {
+        text-align: left;
+        margin: 20px 0;
+        max-width: 100%;
+    }
+} 
+
+
+@media (max-width: 665px) {
+        .carousel .list .item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            padding-left: 20px;
+        }
+        
+        .carousel .list .item #bottle1,
+        .carousel .list .item #bottle2 {
+            margin-left: 40px;
+            background-size: contain;
+            background-position: center center;
+            height: 30vh;
+        }
+        
+        .content {
+            text-align: left;
+            margin: 20px 0;
+            max-width: 100%;
+        }
+        .wrapper ul li {
+            width: 50px;
+            height: 50px; 
+            line-height: 20px; 
+        }
+    
+        .wrapper ul li .fa {
+            font-size: 1.5rem;
+        }
+    
+        footer .logoFooter {
+            width: 80px;
+            height: 80px;
+        }
+    
+        footer .creator {
+            font-size: 12px;
+        }
+        #inst {
+            margin-top: 10px;
+        }
+        #whats {
+            margin-top: 10px;
+        }
+    }
+    
+    @media (max-width: 420px) {
+        #bottle1.item {
+            margin: 0px 0px 0px 0px !important;
+            padding: 0px 0px 0px 0px !important;
+        }
+        #bottle2.item{
+            margin: 0px 0px 0px 0px !important;
+            padding: 0px 0px 0px 0px !important;
+        }
+        .carousel .list .item #bottle1,
+        .carousel .list .item #bottle2 {
+            margin-left: 20px;
+            background-size: contain;
+            background-position: center center;
+            height: 25vh;
+        }
+        
+        .content {
+            margin: 10px 0; 
+            max-width: 80%;
+        }
+    
+        .content .title {
+            font-size: 40px;
+        }
+    
+        .content .name {
+            font-size: 20px; 
+        }
+    
+        .wrapper ul {
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-top: 10px;
+        }
+        footer .logoFooter {
+            width: 70px;
+            height: 90px; 
+        }
+        footer .creator {
+            font-size: 10px;
+            text-align: center;
+        }
+        ul{
+            padding: 0px 0px 0px 0px !important;
+        }
+    }
+    
