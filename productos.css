@@ -14,12 +14,6 @@ html, body {
     width: 120px; 
     height: 50px;
 }
-#logoHeader1{
-    display: none;
-}
-#logoHeader2{
-    display: block;
-}
 .logoFooter {
     display: flex;
     justify-content: center;
@@ -28,101 +22,103 @@ html, body {
     height: 100px;
     margin-right: 50px;
 }
-nav {
-    background-color: rgb(151, 51, 56) !important;
-    font-size: 20px;
-    font-weight: bold;
-}
 .nav-link {
-    color: white !important;
-}
+    color:white !important;
 
+}
 .nav-item {
     margin: 0 90px;
 }
+nav {
+    font-size: 20px;
+    font-weight: bold;
+}
 
-.navbar-nav {
+#logoHeader1{
+    display: none;
+}
+#logoHeader2{
+    display: block;
+}
+header {
+    background-color: rgb(151, 51, 56) !important;
+}
+/* productos */
+.products {
+    width: 100%;
     display: flex;
+    text-align: center;
+    margin: auto;
     justify-content: center;
-
-}
-.content {
-    text-align: left; 
-    max-width: 40%;
+    align-content: space-evenly;
+    padding-top: 0;
 }
 
-.content .title {
-    font-size: 100px;
-    text-transform: uppercase;
-    color: rgb(151, 51, 56);
-    font-weight: bold;
-    line-height: 1;
+.gins {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin: 80px;
+}
+
+.products--gins {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.products--gins img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* scroll */
+.hero {
+    height: 100vh;
+    min-height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero--reverse {
+    flex-direction: row-reverse;
+}
+
+.heroTitle {
+    font-size: 4rem;
+}
+
+.heroImg {
+    width: 100%;
     opacity: 0;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    transition: opacity 0.6s ease-in 0.3s, transform 0.6s ease-in 0.3s;
 }
 
-.content .name {
-    font-size: 100px;
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 1;
-    text-shadow: 3px 4px 4px rgba(255, 255, 255, 0.8);
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.6s 1 forwards;
+[data-animation="fade"] {
+    transform: translateX(100%);
 }
 
-.content .des {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    margin-left: 5px;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.9s 1 forwards;
+[data-animation="show"] {
+    transform: scale(0);
 }
 
-.content .btn {
-    margin-left: 5px;
-    opacity: 0;
-    animation: animate 1s ease-in-out 1.2s 1 forwards;
+[data-animation="up"] {
+    transform: translateY(100%);
 }
 
-.content .btn button {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border: 2px solid #fff;
+.unset {
+    opacity: 1;
+    transform: translateX(0), scale(1), translateY(0);
 }
 
-.content .btn button:nth-child(1) {
-    margin-right: 15px;
-}
-
-.content .btn button:nth-child(2) {
-    background: transparent;
-    color: #14ff72cb;
-    border: 2px solid #fff;
-    transition: 0.3s;
-}
-
-.content .btn button:nth-child(2):hover {
-    background-color: #14ff72cb;
-    color: #fff;
-    border-color: #14ff72cb;
-}
-
-@keyframes animate {
-    from {
-        opacity: 0;
-        transform: translate(0, 100px);
-        filter: blur(33px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0);
-        filter: blur(0);
-    }
-}
 /* footer */
 footer {
     background-image: linear-gradient(79deg, #696868, #999898 48%, #ddd9d9);
@@ -186,54 +182,7 @@ footer {
     margin-top: 65px;
     margin-right: 10px;
 }
-/* scroll */
-.hero {
-    height: 100vh;
-    min-height: 100%;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    overflow: hidden;
-}
 
-.hero--reverse {
-    flex-direction: row-reverse;
-}
-
-.heroTitle {
-    font-size: 4rem;
-}
-
-.heroImg {
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.6s ease-in 0.3s, transform 0.6s ease-in 0.3s;
-}
-
-[data-animation="fade"] {
-    transform: translateX(0%);
-}
-
-[data-animation="show"] {
-    transform: translateX(-200%);
-}
-
-[data-animation="up"] {
-    transform: translateX(0%);
-}
-
-.unset {
-    opacity: 1;
-    transform: translateX(0), scale(1), translateY(0);
-}
-
-.folow {
-    display: flex;
-    justify-content: start;
-}
 /* medias */
 @media (max-width: 991px) {
     #logoHeader1 {
@@ -359,3 +308,4 @@ footer {
             margin-top: 0;
         }
     }
+    
