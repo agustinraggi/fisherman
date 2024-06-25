@@ -9,8 +9,6 @@ html, body {
     width: 100%;
 }
 
-
-
 .logoHeader {
     display: flex;
     justify-content: center;
@@ -34,7 +32,7 @@ html, body {
 }
 
 header {
-    background-color: rgb(151, 51, 56) !important;
+    background-color: rgb(151, 51, 56);
 }
 
 nav {
@@ -83,8 +81,7 @@ nav {
     flex: 0 0 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start; 
-    padding-left: 50px; 
+    justify-content: flex-start;  
 }
 
 .carousel .arrows {

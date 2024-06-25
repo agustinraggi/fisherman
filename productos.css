@@ -219,7 +219,14 @@ footer {
     }
 }
     
-    @media (max-width: 565px) {
+    @media (max-width: 675px) {
+        .imagGin {
+            width: 150px;
+            height: 180px;
+        }
+        .price {
+            font-size: 12px;
+        }
         .wrapper ul {
             display: flex; 
             align-items: center; 
@@ -241,6 +248,10 @@ footer {
         }
     }
     @media (max-width: 565px) {
+        .gins {
+            display: flex;
+            flex-direction: column; 
+        }
         footer .creator {
             font-size: 10px;
             text-align: center;
@@ -261,6 +272,10 @@ footer {
     }
     
     @media (max-width: 400px) {
+        .nav-link{
+            font-size: 18px;
+            justify-content: start;
+        }
         footer {
             display: flex;
             flex-direction: column;
