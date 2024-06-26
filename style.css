@@ -34,6 +34,13 @@ html, body {
 header {
     background-color: rgb(151, 51, 56);
 }
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
 nav {
     font-size: 20px;
@@ -59,17 +66,18 @@ nav {
 }
 
 #bottle1 {
-    background-image: url(assets/botella\ 1.png);
+    background-image: url(assets/gin-london-dry.png);
 }
 
 #bottle2 {
-    background-image: url(assets/botella\ 2.png);
+    background-image: url(assets/gin-hibiscus.png);
 }
 
 .carousel {
     width: 100%;
     overflow: hidden;
     position: relative;
+    margin-top: 90px;
 }
 
 .carousel .list {
@@ -391,6 +399,9 @@ footer {
 }
 
 @media (max-width: 400px) {
+    .carousel {
+        margin-top: none;
+    }
     #bottle1.item, #bottle2.item {
         margin: 0;
         padding: 0;

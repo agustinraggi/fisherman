@@ -1,27 +1,27 @@
-// SCROLL
+document.addEventListener('DOMContentLoaded', function () {
+    function handleScrollAnimation() {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight * 0.75) {
+                section.classList.add('show');
+            } else {
+                section.classList.remove('show');
+            }
+        });
 
-const images = document.querySelectorAll(".heroFigure");
+        const images = document.querySelectorAll('.image');
+        images.forEach(image => {
+            const imageTop = image.getBoundingClientRect().top;
+            if (imageTop < window.innerHeight * 0.75) {
+                image.classList.add('show');
+            } else {
+                image.classList.remove('show');
+            }
+        });
+    }
 
-function triggerAnimation(entries) {
-    entries.forEach(entry => {
-        const image = entry.target.querySelector('img');
-        if (entry.isIntersecting) {
-            image.classList.add('unset');
-        } else {
-            image.classList.remove('unset');
-        }
-    });
-}
+    window.addEventListener('scroll', handleScrollAnimation);
 
-const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver(triggerAnimation, options);
-
-images.forEach(image => {
-    observer.observe(image);
+    handleScrollAnimation();
 });
-
